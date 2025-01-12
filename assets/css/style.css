@@ -976,33 +976,33 @@
     display: block; 
     height: 50px !important; 
     width: 50px !important; 
-    background-image: url('/vsite/assets/images/ucf-logo-1.png');
+    background-image: url('../images/ucf-logo-1.png');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
   }
 
   .timeline-item[data-logo="ucf"]::after {
-    background-image: url('/vsite/assets/images/ucf-logo-2.png');
+    background-image: url('../images/ucf-logo-2.png');
     border-radius: 10px;
   }
   
   .timeline-item[data-logo="santa-fe"]::after {
-    background-image: url('/vsite/assets/images/images.png');
+    background-image: url('../images/images.png');
     border-radius: 10px;
   }
   
   .timeline-item[data-logo="merritt-island"]::after {
-    background-image: url('/vsite/assets/images/Merritt_Island_High_logo.png');
+    background-image: url('../images/Merritt_Island_High_logo.png');
   }
 
   .timeline-item[data-logo="northrop"]::after {
-    background-image: url('/vsite/assets/images/ng-logo-1.jpg');
+    background-image: url('../images/ng-logo-1.jpg');
     border-radius: 10px;
   }
 
   .timeline-item[data-logo="viera"]::after {
-    background-image: url('/vsite/assets/images/viera-1.webp');
+    background-image: url('../images/viera-1.webp');
     border-radius: 10px;
   }
 
