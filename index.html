@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Huber - Website</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/jhlogo-1.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/tennisheadshotsmaller.jpg" alt="John Huber" width="80" class="profile-pic">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="John Huber">John Huber</h1>
+
+          <p class="title">Software Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:johnrhuber001@gmail.com" class="contact-link">johnrhuber001@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+13214828464" class="contact-link">(321) 482-8464</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2001-05-22">May 22, 2001</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Merritt Island, Florida, USA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <div class="resume-section">
+          <button class="view-resume-btn" onclick="openResumeModal()">View Resume</button>
+        </div>
+        
+        <!-- Modal for displaying the resume -->
+        <div id="resume-modal" class="modal" style="display: none;">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeResumeModal()">&times;</span>
+            <iframe src="./assets/images/John_Huber_Resume__Jan_2025_.pdf" width="100%" height="90%"></iframe>
+            <button class="download-resume-btn" onclick="downloadResume()">Download Resume</button>
+          </div>
+        </div>
+        
+        <script>
+          function openResumeModal() {
+            document.getElementById('resume-modal').style.display = 'block';
+            document.querySelector('.navbar').classList.add('hidden');
+            document.querySelectorAll('.icon-box').forEach(icon => {
+              icon.classList.add('hidden');
+            });
+          }
+        
+          function closeResumeModal() {
+            document.getElementById('resume-modal').style.display = 'none';
+            document.querySelector('.navbar').classList.remove('hidden');
+            document.querySelectorAll('.icon-box').forEach(icon => {
+              icon.classList.remove('hidden');
+            });
+          }
+        
+          function downloadResume() {
+            const link = document.createElement('a');
+            link.href = './assets/images/John_Huber_Resume__Jan_2025_.pdf';
+            link.download = 'John_Huber_Resume__Jan_2025_.pdf';
+            link.click();
+          }
+        </script>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/john-huber3" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/johnhuber_" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.youtube.com/@johnhuberiii4985" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.strava.com/athletes/57601637" class="social-link">
+              <i class="fab fa-strava"></i>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Experience</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hello! I'm a software engineer at Northrop Grumman in Melbourne, Florida, and I currently live in Merritt Island, Florida. 
+            I hold a Bachelor's degree in Computer Science from the University of Central Florida and began my academic journey with an 
+            Associate's degree from Santa Fe College.
+          </p>
+
+          <p>
+            After work, I coach high school baseball, combining my love for the game with mentoring the next generation of athletes. 
+            Outside of coding, I enjoy woodworking and exploring ways to combine creativity and craftsmanship. I'm an avid sports 
+            enthusiast, whether it's playing tennis, golf, baseball, or my newest interest—pickleball. Lately, I've been diving into 
+            the world of stock market investing, always looking to learn and challenge myself in new areas. A personal goal of mine this 
+            year is to train for and run my first marathon in 2025!
+          </p>
+
+          <p>
+            Having grown up in Merritt Island, Florida, I cherish the community and inspiration that comes from living near the Space 
+            Coast. My journey so far has been fueled by curiosity and a drive to build, both in software and beyond.
+          </p>
+        </section>
+
+        <header>
+          <h2 class="h2 article-title">Clearances & Certifications</h2>
+        </header>
+
+        <section class="about-text">
+          <ul class="timeline-text">
+            <li>Secret Security Clearance (Active, Issued by DoD, Adjudicated 2023)</li>
+            <li>CompTIA Security+ ce certification (Credential ID RXYPBSXYQE1114C6). Expires Oct 2027</li>
+          </ul>
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item" data-logo="ucf">
+
+              <div class="h4 timeline-item-header">
+                <span class="left-side">University of Central Florida</span>
+                <span class="right-side">Orlando, FL</span>
+              </div>
+
+              <div class="timeline-item-content">
+                <span class="left-side">Bachelor of Science - BS, Computer Science</span>
+                <span class="right-side">August 2021 — December 2023</span>
+              </div>
+
+              <ul class="timeline-text">
+                <li>Honors: President's Honor Roll (2023), Dean's List (2022 & 2023)</li>
+                <li>Society of Hispanic Professional Engineers (SHPE) member</li>
+                <li>Programmed a custom photo booth application with two other developers using Python, reducing event expenses by $700</li>
+              </ul>
+
+            </li>
+
+            <li class="timeline-item" data-logo="santa-fe">
+
+              <div class="h4 timeline-item-header">
+                <span class="left-side">Santa Fe College</span>
+                <span class="right-side">Gainesville, FL</span>
+              </div>
+
+              <div class="timeline-item-content">
+                <span>Associate of Arts - AA</span>
+                <span>August 2019 — August 2021</span>  
+              </div>
+
+            </li>
+
+            <li class="timeline-item" data-logo="merritt-island">
+
+              <div class="h4 timeline-item-header">
+                <span class="left-side">Merritt Island High School</span>
+                <span class="right-side">Merritt Island, FL</span>
+              </div>
+
+              <span>August 2015 — May 2019</span>
+
+              <ul class="timeline-text">
+                <li>4-year member of the Da Vinci Academy of Aerospace & Technology</li>
+                <li>4-year member of the Baseball team</li>
+                <li>3-time player of the week, MaxPreps 2019 Merritt Island High School Varsity Baseball player of the year</li>
+                <li>Recipient of the Mustang award</li>
+              </ul>
+              
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="baseball"></ion-icon>
+            </div>
+
+            <h3 class="h3">Coaching</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item" data-logo="viera">
+
+              <h4 class="h4 timeline-item-title">Viera High School</h4>
+
+              <span>August 2024 — Present</span>
+
+              <p class="timeline-text">
+                Before joing the coaching staff, Viera High School Baseball team has had back-to-back State Championships
+                appearances. Making it to the State Championship game and Semi-final game respectively. I joined the coaching 
+                staff following my year at Merritt Island to be a Junior Varsity coach.
+              </p>
+
+            </li>
+
+            <li class="timeline-item" data-logo="merritt-island">
+
+              <h4 class="h4 timeline-item-title">Merritt Island High School</h4>
+
+              <span>July 2023 — June 2024</span>
+
+              <p class="timeline-text">
+                I was a previous player here and after college graduation I was asked to join the coaching staff on
+                Varsity as a Outfielders and First Base coach. I coached here for one year and that year we entered 
+                the playoffs as the #1 ranked team in the region. We won the region and moved on to the State Championships
+                final four. We lost in the State semi-final game.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section> -->
+
+        <!--
+          - service
+        -->
+
+        <!-- <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section> -->
+
+
+        <!--
+          - testimonials
+        -->
+
+        <!-- <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section> -->
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Interests</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/atp-2.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/mlb-1.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/pga-2.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/f1-1.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/olympics-1.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/lambo-logo-silver-1.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/McLaren-Logo.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/Koenigsegg-Symbol.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/NFL-Logo.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/nasdaq-2.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      
+
+      <!--
+        - #EXPERIENCE
+      -->
+
+      <article class="experience" data-page="experience">
+
+        <header>
+          <h2 class="h2 article-title">Experience</h2>
+        </header>
+
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item" data-logo="northrop">
+
+              <div class="h4 timeline-item-header">
+                <span class="left-side">Associate Software Engineer</span>
+                <span class="right-side">Melbourne, FL</span>
+              </div>
+
+              <div class="timeline-item-content">
+                <span>Northrop Grumman</span>
+                <span>February 2024 — Present</span>
+              </div>
+
+              <ul class="timeline-text">
+                <li>Designed and implemented key components of a Cross Domain Solution (CDS) for the Northrop Grumman E-2D Advanced 
+                  Hawkeye program in collaboration with the French Navy</li>
+                <li>Developed and validated CDS rulesets using DFDL language to ensure compliance with strict security protocols</li>
+                <li>Programmed CDS functionality in Python, including message handling logic to uniquely identify and process data chunks
+                   and instantiate corresponding message classes</li>
+                <li>Conducted rigorous testing of the CDS using CHORD hardware to simulate real-world client-server communication, ensuring 
+                  reliability and performance</li>
+                <li>Utilized tools like ncat for supplemental testing and troubleshooting alongside hardware-based validation</li>
+                <li>Actively participated in Agile workflows, including biweekly scrums, sprint planning, Kanban processes, code reviews, 
+                  and story point estimation using tools like Git, Jira, Bitbucket, and Confluence</li>
+                <li>Presented technical deliverables to French and U.S. Navy representatives, as well as Northrop Grumman leadership, 
+                  during a critical design review (CDR)</li>
+                <li>Recognized with a "BRAVO" award for exceptional contributions to the CDS project, demonstrating technical excellence 
+                  and leadership</li>
+              </ul>
+
+            </li>
+
+            <li class="timeline-item" data-logo="northrop">
+
+              <div class="h4 timeline-item-header">
+                <span class="left-side">Software Engineer Intern</span>
+                <span class="right-side">Melbourne, FL</span>
+              </div>
+
+              <div class="timeline-item-content">
+                <span>Northrop Grumman</span>
+                <span>May 2023 — July 2023</span>
+              </div>
+
+              <ul class="timeline-text">
+                <li>Modified custom Python tool for real-time system performance monitoring on Linux systems (Sysstat)</li>
+                <li>Implemented JSON format updates, time-stamped subdirectories, and memory/disk/CPU data collection</li>
+                <li>Carried out serialization using Python pickle format instead of traditional text files, resulting in a 92% 
+                  reduction in file size and a 63% improvement in data loading and retrieval efficiency</li>
+                <li>Tested and validated tool in VM environment to ensure robust performance across various system configurations</li>
+                <li>Collaborated in an AGILE environment using Atlassian tools (Jira, Bitbucket/GIT, Fisheye/Crucible, 
+                  Artifactory, Confluence). Actively participated in daily SCRUMs</li>
+              </ul>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #PROJECTS
+      -->
+
+      <article class="projects" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="project">
+
+
+          <div id="project-modal" class="modal" style="display: none;">
+            <div class="modal-content-project">
+              <span class="close-btn" onclick="closeProjectModal()">&times;</span>
+            </div>
+          </div>
+
+          <script>
+            function openProjectModal(element) {
+              const projectItem = element.closest('.project-item');
+
+              // Retrieve data attributes
+              const title = projectItem.dataset.title;
+              const description = projectItem.dataset.description;
+              const github = projectItem.dataset.github;
+              const deployed = projectItem.dataset.deployed;
+
+              // Populate modal content
+              const modalContent = `
+                <h2>${title}</h2>
+                <p>${description}</p>
+                <div class="modal-links">
+                  <a href="${github}" target="_blank">GitHub Repository</a>
+                  <a href="${deployed}" target="_blank">Deployed Project</a>
+                </div>
+              `;
+
+              const modal = document.getElementById('project-modal');
+              modal.querySelector('.modal-content-project').innerHTML = `
+                <span class="close-btn" onclick="closeProjectModal()">&times;</span>
+                ${modalContent}
+              `;
+
+              // Display modal
+              modal.style.display = 'block';
+            }
+
+            function closeProjectModal() {
+              document.getElementById('project-modal').style.display = 'none';
+            }
+
+          </script>
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+            <li class="select-item">
+              <button data-select-item>Full Stack</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Full Stack</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development"
+                data-title="Stratsim"
+                data-description="Simlation engine for casino table game strategies.
+                Developed a comprehensive web application that simulates Roulette, Craps, Blackjack, and Baccarat games,
+                featuring historical information, rules, and gameplay instructions for each game.
+                Engineered a simulation engine capable of instantly generating years’ worth of results for several strategies along
+                with providing statistical insights and ensuring scalability and performance with efficient algorithms.
+                Incorporated dynamic elements, including real-time card visuals for Blackjack and Baccarat games.
+                Fully responsive for both web and mobile.
+                Tech Stack: ReactJS, JavaScript, HTML, CSS"
+                data-github="https://github.com/Johnhuber3/stratsim"
+                data-deployed="https://stratsim.vercel.app">
+              <a href="#">
+
+                <figure class="project-img" onclick="openProjectModal(this)">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/roulette-3.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">StratSim</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="full stack"
+                data-title="Algorooms"
+                data-description="Collaborative coding environment for solving problem with a real time coding text editor. 
+                Worked on the Front end and designed a large portion of the overall websites’ UI/UX design.
+                Collaborated with 4 developers to create a web app to practice data structures and algorithms collaboratively.
+                Room-based architecture so users can create/join specific rooms dedicated to particular data structures and topics.
+                Employed Socket.io to facilitate live updates to a shared code editor and enable real-time messaging.
+                Tech Stack: TypeScript, MongoDB, ExpressJS, React, NodeJS, NextJS, WebSockets, TailwindCSS"
+                data-github="https://github.com/zeyf/algorooms/tree/frontend"
+                data-deployed="https://github.com/zeyf/algorooms/tree/frontend">
+              <a href="#">
+
+                <figure class="project-img" onclick="openProjectModal(this)">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/algorooms.png" alt="algorooms" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Algorooms</h3>
+
+                <p class="project-category">Full Stack</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224889.01561121727!2d-80.83343707123032!3d28.271322618563904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88de02e6807a6781%3A0xd2016c1385ff6777!2sMerritt%20Island%2C%20FL!5e0!3m2!1sen!2sus!4v1735520785170!5m2!1sen!2sus"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <div class="contact-page-container">
+
+          <!-- Left Section -->
+          <div class="contact-page-info">
+            <h3 class="h3 form-title">My Contact & Socials</h3>
+            
+            <ul class="contact-page-list">
+              <li class="contact-page-item">
+                <div class="icon-box">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </div>
+                <div class="contact-page-details">
+                  <p class="contact-page-title">Email</p>
+                  <a href="mailto:johnrhuber001@gmail.com" class="contact-page-link">johnrhuber001@gmail.com</a>
+                </div>
+              </li>
+              <li class="contact-page-item">
+                <div class="icon-box">
+                  <ion-icon name="phone-portrait-outline"></ion-icon>
+                </div>
+                <div class="contact-page-details">
+                  <p class="contact-page-title">Phone</p>
+                  <a href="tel:+13214828464" class="contact-page-link">(321) 482-8464</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        
+          <!-- Right Section -->
+          <div class="contact-page-socials-large">
+            <a href="https://www.instagram.com/johnhuber_" class="contact-page-social-link-large" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/john-huber3" class="contact-page-social-link-large" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/@johnhuberiii4985" class="contact-page-social-link-large-youtube" target="_blank">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="https://www.strava.com/athletes/57601637" class="contact-page-social-link-large-strava" target="_blank">
+              <i class="fab fa-strava"></i>
+            </a>            
+          </div>
+        
+        </div>
+        
+        
+        
+        
+        <!-- <section class="contact-form">
+
+          <h3 class="h3 form-title">My Contact & Socials</h3>
+
+          <form action="https://example.com/submit-form" method="POST" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section> -->
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
