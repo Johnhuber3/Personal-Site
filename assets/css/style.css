@@ -972,10 +972,10 @@
     content: "";
     position: absolute;
     top: -10px; 
-    left: -65.5px !important;
+    left: -49px !important;
     display: block; 
-    height: 50px !important; 
-    width: 50px !important; 
+    height: 40px !important; 
+    width: 40px !important; 
     background-image: url('../images/ucf-logo-1.png');
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -1625,7 +1625,11 @@
       font-size: 18px;
     }
   
-  
+    .timeline-item::after {
+      left: -65.5px !important;
+      height: 50px !important; 
+      width: 50px !important; 
+    }
   
     /**
      * #MAIN
